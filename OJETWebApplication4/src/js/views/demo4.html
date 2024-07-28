@@ -1,0 +1,60 @@
+<h1>List Item Layout</h1>
+
+<div id="sampleDemo" class="demo-padding demo-container">
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+              
+      <div id="div1">
+        <oj-c-list-item-layout>
+            <oj-c-selector-all
+                  selected-keys="{{selectedItems}}"
+                  slot="selector"
+                  id="selectAll"
+                  aria-label="select all"></oj-c-selector-all>
+          <span>Select All</span>  
+        </oj-c-list-item-layout>
+        
+        <oj-c-list-view
+          id="listview"
+          aria-label="list to show selection features"
+          data="[[dataProvider]]"
+          selected="{{selectedItems}}"
+          selection-mode="multiple"
+          on-selected-changed="[[handleSelectedChanged]]">
+          <template slot="itemTemplate" data-oj-as="item">
+            <oj-c-list-item-layout>
+              <span class="oj-typography-body-md oj-text-color-primary">
+                <oj-bind-text value="[[item.item.data.name]]"></oj-bind-text>
+              </span>
+              <oj-c-selector
+                :aria-label="[[item.item.data.name]]"
+                slot="selector"
+                selected-keys="{{selectedItems}}"
+                selection-mode="multiple"
+                row-key="[[item.item.data.id]]"></oj-c-selector>
+              <oj-c-avatar slot="leading" size="xs" src="[[item.item.data.image]]"></oj-c-avatar>
+              <span slot="secondary" class="oj-typography-body-sm oj-text-color-secondary">
+                <oj-bind-text value="[[item.item.data.title]]"></oj-bind-text>
+              </span>
+            </oj-c-list-item-layout>
+          </template>
+        </oj-c-list-view>
+      
+        <div class="oj-typography-body-sm oj-text-color-secondary">
+          <br />
+          <label for="curr-selection">Current Selection:&nbsp;</label>
+          <span id="curr-selection-value">
+            <oj-bind-text value="[[getDisplayValue(selectedItems())]]"></oj-bind-text>
+          </span>
+          <br />
+          <br />
+          <label for="selected-item-ids">IDs from Selected Change Event:&nbsp;</label>
+          <span id="selected-item-ids-value">
+            <oj-bind-text value="[[ko.toJSON(selectedIds)]]"></oj-bind-text>
+          </span>
+        </div>
+      </div>
+      
+      
+      
+    </div>
+  </div>

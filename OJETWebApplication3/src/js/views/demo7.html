@@ -1,0 +1,25 @@
+<h1>Date Validation</h1>
+<div id="sampleDemo" class="demo-padding demo-container">
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+              
+      <div id="div1">
+        <oj-label for="minmax">Min + Max Restriction</oj-label>
+        <oj-input-date
+          id="minmax"
+          value="{{value}}"
+          min="[[min]]"
+          max="2013-12-06"
+          class="oj-form-control-max-width-sm"
+          autocomplete="off"></oj-input-date>
+      
+        <br />
+        <br />
+      
+        <span class="oj-label">Current component value is:</span>
+        <span><oj-bind-text value="[[value]]"></oj-bind-text></span>
+      </div>
+      
+      
+      
+    </div>
+  </div>

@@ -1,0 +1,36 @@
+<h1>Text and  Number Range Validator</h1>
+
+<div id="sampleDemo" class="demo-padding demo-container">
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+              
+      <oj-form-layout id="validator-example">
+        <oj-c-input-text
+          id="numberRange1"
+          value="{{numberValue1}}"
+          validators="[[validators]]"
+          converter="[[currencyConverter]]"
+          label-hint="oj-c-input-text with NumberRangeValidator"></oj-c-input-text>
+        <oj-c-input-number
+          id="numberRange2"
+          value="{{numberValue2}}"
+          min="10000"
+          max="25000"
+          label-hint="oj-c-input-number with min and max"></oj-c-input-number>
+        <oj-c-input-text
+          id="numberRange3"
+          value="{{numberValue3}}"
+          validators="[[validators2]]"
+          converter="[[numberConverter]]"
+          label-hint="oj-c-input-text NumberRangeValidator min==max"></oj-c-input-text>
+        <oj-c-input-number
+          id="numberRange4"
+          value="{{numberValue4}}"
+          min="1"
+          max="1"
+          label-hint="oj-c-input-number min==max"></oj-c-input-number>
+      </oj-form-layout>
+      
+      
+      
+    </div>
+  </div>

@@ -1,0 +1,21 @@
+<h1>Tree Layout</h1>
+<div id="sampleDemo" class="demo-padding demo-container">
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+              
+      <oj-tree-view
+        id="div1"
+        data="[[data]]"
+        selection-mode="multiple"
+        aria-label="Tree View with JSON Data">
+        <template slot="itemTemplate" data-oj-as="row">
+          <span class="oj-treeview-item-icon"></span>
+          <span class="oj-treeview-item-text">
+            <oj-bind-text value="[[row.data.title]]"></oj-bind-text>
+          </span>
+        </template>
+      </oj-tree-view>
+      
+      
+      
+    </div>
+  </div>

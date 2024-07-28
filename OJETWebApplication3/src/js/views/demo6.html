@@ -1,0 +1,42 @@
+<h1>Date Validation</h1>
+
+<div id="sampleDemo" class="demo-padding demo-container">
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+              
+      <div id="div1">
+        <oj-label for="from">From</oj-label>
+      
+        <oj-input-date
+          id="from"
+          value="{{value}}"
+          date-picker="[[datePicker]]"
+          max="[[toValue]]"
+          class="oj-form-control-max-width-sm"
+          autocomplete="off"></oj-input-date>
+        <br />
+      
+        <oj-label for="to">To</oj-label>
+        <oj-input-date
+          id="to"
+          value="{{toValue}}"
+          date-picker="[[datePicker]]"
+          min="[[value]]"
+          class="oj-form-control-max-width-sm"
+          autocomplete="off"></oj-input-date>
+        <br />
+        <br />
+      
+        <span class="oj-label">From component value is:</span>
+        <span><oj-bind-text value="[[value]]"></oj-bind-text></span>
+      
+        <br />
+        <br />
+      
+        <span class="oj-label">To component value is:</span>
+        <span><oj-bind-text value="[[toValue]]"></oj-bind-text></span>
+      </div>
+      
+      
+      
+    </div>
+  </div>
